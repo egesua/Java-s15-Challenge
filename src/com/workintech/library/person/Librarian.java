@@ -2,6 +2,7 @@ package com.workintech.library.person;
 
 import com.workintech.library.Library;
 import com.workintech.library.books.Book;
+import com.workintech.library.books.book_enums.BookGenre;
 import com.workintech.library.books.book_enums.Condition;
 import com.workintech.library.interfaces.Customizable;
 import com.workintech.library.person.person_enum.Role;
@@ -115,7 +116,7 @@ public final class Librarian extends Person implements Customizable {
         if (borrow.containsKey(book)) {
             System.out.println("Condition on the day " + getFullName() + " borrowed this book: " + book.getCondition());
             Condition updatedCondition = book.setCondition(Condition.randomCondition());
-            System.out.println("");
+            System.out.println(".");
 
             if (updatedCondition.equals(Condition.FACTORY_NEW)) {
                 reader.setBalance(reader.getBalance());
@@ -161,7 +162,15 @@ public final class Librarian extends Person implements Customizable {
                 System.out.println("There is no book like this in our database.");
             }
         }
-
+    }
+    public List<Book> searchByGenre(List<Book> list, BookGenre genre) {
+        List<Book> result = new ArrayList<>();
+        for (Book book : list) {
+            if (book.getGenre() == genre) {
+                result.add(book);
+            }
+        }
+        return result;
     }
 
     @Override

@@ -14,6 +14,7 @@ public class Reader extends Person{
     public Reader(long id, String fullName) {
         super(id, fullName, Role.USER);
         this.bookLimit = 5;
+        this.balance = 100;
     }
 
     public int getBookLimit() {
@@ -41,6 +42,6 @@ public class Reader extends Person{
     }
 
     public void setBalance(double balance) {
-        this.balance = balance;
+        this.balance = 100;
     }
 }

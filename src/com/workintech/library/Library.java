@@ -28,7 +28,7 @@ public class Library {
         this.booksBorrowed = booksBorrowed;
         this.returnedBooks = returnedBooks;
         this.librarian = librarian;
-        this.libraryCashBalance = 0;
+        this.libraryCashBalance = 1000;
     }
 
     public List<Book> getBooks() {

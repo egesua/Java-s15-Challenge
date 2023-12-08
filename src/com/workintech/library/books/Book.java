@@ -61,6 +61,14 @@ public class Book {
         return condition;
     }
 
+    public BookGenre getGenre() {
+        return genre;
+    }
+
+    public void setGenre(BookGenre genre) {
+        this.genre = genre;
+    }
+
     @Override
     public String toString() {
         return "Book{" +
