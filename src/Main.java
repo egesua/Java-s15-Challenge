@@ -5,7 +5,7 @@ import com.workintech.library.books.book_enums.Condition;
 import com.workintech.library.person.Author;
 import com.workintech.library.person.Librarian;
 import com.workintech.library.person.Reader;
-import com.workintech.library.person.person_enum.Role;
+import com.workintech.library.person.person_enums.Role;
 
 import java.util.*;
 

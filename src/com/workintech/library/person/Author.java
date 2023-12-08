@@ -3,7 +3,7 @@ package com.workintech.library.person;
 import com.workintech.library.books.Book;
 import com.workintech.library.books.book_enums.Condition;
 import com.workintech.library.interfaces.Customizable;
-import com.workintech.library.person.person_enum.Role;
+import com.workintech.library.person.person_enums.Role;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
 package com.workintech.library.person;
 
 import com.workintech.library.books.Book;
-import com.workintech.library.person.person_enum.Role;
+import com.workintech.library.person.person_enums.Role;
 
 import java.util.HashSet;
 import java.util.Set;
