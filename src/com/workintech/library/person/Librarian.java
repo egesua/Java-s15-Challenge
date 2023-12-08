@@ -2,7 +2,7 @@ package com.workintech.library.person;
 
 import com.workintech.library.Library;
 import com.workintech.library.books.Book;
-import com.workintech.library.books.book_enums.Status;
+import com.workintech.library.books.book_enums.Condition;
 import com.workintech.library.interfaces.Customizable;
 import com.workintech.library.person.person_enum.Role;
 
@@ -69,13 +69,7 @@ public final class Librarian extends Person implements Customizable {
         System.out.println("Your " + book.getPrice() + " has been paid.");
     }
 
-    public void returnRefund(Library library, Map<Book, Reader> borrow, Book book, Reader reader){
-        if(borrow.containsKey(book)){
-            System.out.println("--------");
-        } else {
-            System.out.println("---------");
-        }
-    }
+
     public Reader findReader(Set<Reader> readerSet, String readerName){
         for(Reader reader: readerSet){
             String readersName = reader.getFullName();
@@ -110,7 +104,6 @@ public final class Librarian extends Person implements Customizable {
         return authorsBook;
     }
 
-    //add the price thing here...
 
     @Override
     public void newBook(List<Book> list, Book book) {
@@ -143,10 +136,10 @@ public final class Librarian extends Person implements Customizable {
     }
 
     @Override
-    public void updateBook(List<Book> list, Book book, Status status) {
+    public void updateBook(List<Book> list, Book book, Condition condition) {
         if(list.contains(book)) {
-            book.setStatus(status);
-            System.out.println("The status of the book has changed to: " + status);
+            book.setCondition(condition);
+            System.out.println("The status of the book has changed to: " + condition);
         } else {
             System.out.println("First we need to book for the status change!");
         }

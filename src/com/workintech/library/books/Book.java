@@ -1,22 +1,22 @@
 package com.workintech.library.books;
 
 import com.workintech.library.books.book_enums.BookGenre;
-import com.workintech.library.books.book_enums.Status;
+import com.workintech.library.books.book_enums.Condition;
 
 public class Book {
     private long id;
     private String title;
     private String author;
     private double price;
-    private Status status;
+    private Condition condition;
     private BookGenre genre;
 
-    public Book(long id, String title, String author, double price, Status status, BookGenre genre) {
+    public Book(long id, String title, String author, double price, Condition condition, BookGenre genre) {
         this.id = id;
         this.title = title;
         this.author = author;
         this.price = price;
-        this.status = status;
+        this.condition = condition;
         this.genre = genre;
     }
 
@@ -52,12 +52,13 @@ public class Book {
         this.price = price;
     }
 
-    public Status getStatus() {
-        return status;
+    public Condition getCondition() {
+        return condition;
     }
 
-    public void setStatus(Status status) {
-        this.status = status;
+    public Condition setCondition(Condition condition) {
+        this.condition = condition;
+        return condition;
     }
 
     @Override
@@ -67,7 +68,7 @@ public class Book {
                 ", title='" + title + '\'' +
                 ", author='" + author + '\'' +
                 ", price=" + price +
-                ", status=" + status +
+                ", status=" + condition +
                 ", genre=" + genre +
                 '}';
     }
